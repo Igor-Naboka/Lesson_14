@@ -1,0 +1,314 @@
+@import "null.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
+
+/*------------------------ universal selectors ---------------------------*/
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  background: #f5f5f5;
+  line-height: 1;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+[class*="__container"] {
+  margin: 0 auto;
+  max-width: 1050px;
+  padding: 0 15px;
+}
+
+/* other selectors */
+
+/*------------------------- reusable units --------------------------------*/
+/* title-block */
+.title-block {
+  padding: 5px 0px;
+}
+
+.title-block__content {
+}
+
+.title-block__sub-title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding-left: 28px;
+  margin-bottom: 30px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.title-block__sub-title_color-purple {
+  color: #5d62b5;
+}
+.title-block__title_color-white,
+.title-block__sub-title_color-white {
+  color: #ffffff;
+}
+
+.title-block__sub-title_pseudo-element-purple::before,
+.title-block__sub-title_pseudo-element-white::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  left: 0px;
+  width: 17px;
+  height: 16px;
+}
+
+.title-block__sub-title_pseudo-element-purple::before {
+  background: url("../img/title-block/overline-mark-purple.svg") center / auto no-repeat;
+}
+
+.title-block__sub-title_pseudo-element-white::before {
+  background: url("../img/title-block/overline-mark-white.svg") center / auto no-repeat;
+}
+
+.title-block__title {
+  font-size: 36px;
+  line-height: 1.17;
+  font-weight: 900;
+}
+
+/* three-row-cards */
+.three-row-cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -13.5px;
+}
+.three-row-cards__item {
+  padding: 0 13.5px;
+  flex: 0 0 33.333%;
+}
+.three-row-cards__content {
+  padding: 4px 3px 4px 86px;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.three-row-cards__content_dog-love::before,
+.three-row-cards__content_dog-vet::before,
+.three-row-cards__content_dog-stream::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 63px;
+  height: 63px;
+}
+
+.three-row-cards__content_dog-love::before {
+  background: url("../img/index/our-promise/vector/dog-love.svg") center / auto no-repeat;
+}
+
+.three-row-cards__content_dog-vet::before {
+  background: url("../img/index/our-promise/vector/dog-vet.svg") center / auto no-repeat;
+}
+
+.three-row-cards__content_dog-stream::before {
+  background: url("../img/index/our-promise/vector/dog-stream.svg") center / auto no-repeat;
+}
+
+.three-row-cards__title {
+  font-weight: 900;
+  font-size: 19px;
+  line-height: 1.37;
+  color: #f2726f;
+  margin-bottom: 20px;
+}
+.three-row-cards__text {
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+  color: #4b4b4b;
+}
+
+/* button */
+.button {
+  display: inline-block;
+  width: 210px;
+  height: 48px;
+  background: #f2726f;
+  border-radius: 8px;
+  text-align: center;
+}
+.button__link {
+  display: block;
+  height: 100%;
+  letter-spacing: 0.15px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 18px 0px;
+}
+
+/* text-and-button */
+.text-and-button {
+  padding: 33px 76px 36px 60px;
+  background: #5d62b5;
+  border-radius: 20px;
+}
+.text-and-button__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text-and-button__content {
+  flex: 0 0 562px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #ffffff;
+  padding: 10px;
+}
+.text-and-button__wrapper-button {
+  flex: 0 0 210px;
+}
+
+/* four-row-cards */
+.four-row-cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -12px;
+}
+.four-row-cards__item {
+  flex: 0 0 23.235%;
+  padding: 0 12px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.four-row-cards__content {
+  padding: 4px 0 0 87px;
+  height: 100%;
+}
+.four-row-cards__numeric-data {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1.17;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+.four-row-cards__text-data {
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+  color: #5d62b5;
+}
+
+.four-row-cards__content_puppy-baths::before,
+.four-row-cards__content_dogs-boarded::before,
+.four-row-cards__content_pups-trained::before,
+.four-row-cards__content_meals-served::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 12px;
+  height: 76px;
+  width: 76px;
+}
+
+.four-row-cards__content_puppy-baths::before {
+  background: url("../img/index/our-impact/vector/dog-duckling.svg") center/auto no-repeat;
+}
+.four-row-cards__content_dogs-boarded::before {
+  background: url("../img/index/our-impact/vector/dog-house.svg") center/auto no-repeat;
+}
+.four-row-cards__content_pups-trained::before {
+  background: url("../img/index/our-impact/vector/retractable-leash.svg") center/auto no-repeat;
+}
+.four-row-cards__content_meals-served::before {
+  background: url("../img/index/our-impact/vector/dog-food-bowl.svg") center/auto no-repeat;
+}
+
+/* ---------------------------------------------------- */
+
+/* our-promise */
+.our-promise {
+  padding: 10px 0px;
+}
+.our-promise__container {
+}
+.our-promise__body {
+}
+.our-promise__title {
+  margin-bottom: 63px;
+}
+
+.our-promise__content {
+}
+
+/* our-impact*/
+.our-impact {
+  padding: 90px 0px 82px 0px;
+}
+.our-impact__wrapper {
+  background: #29c3be;
+}
+.our-impact__container {
+}
+.our-impact__body {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.our-impact__body::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: -66px;
+  height: 275px;
+  width: 645px;
+  background: url("../img/index/our-impact/raster/blob.png") center/auto no-repeat;
+  z-index: 5;
+}
+
+.our-impact__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -10px;
+}
+.our-impact__title {
+  flex: 0 0 42.255%;
+  padding: 97px 10px 0 10px;
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 6;
+}
+
+.our-impact__picture {
+  flex: 0 0 48.82%;
+  padding: 0 10px;
+  position: relative;
+  top: -80px;
+  left: 0px;
+  z-index: 5;
+}
+.our-impact__img {
+  width: 100%;
+  border-radius: 40px;
+}
+.our-impact__central-block {
+  padding: 10px 0px;
+  margin-bottom: 70px;
+}
+
+.our-impact__bottom-block {
+  position: relative;
+  top: 76px;
+  left: 0px;
+}
